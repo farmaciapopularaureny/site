@@ -107,7 +107,7 @@
       background: white; color: hsl(var(--primary)); padding: 1rem 2.2rem;
       border-radius: 999px; font-size: 1.25rem; font-weight: 700; text-decoration: none;
       box-shadow: 0 10px 30px rgba(0,0,0,0.25); transition: all 0.35s;
-      border: none; /* removida linha branca */
+      border: none;
     }
     .btn-whatsapp:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.3); background: #f8f8f8; }
 
@@ -135,11 +135,24 @@
     }
     .depoimento::before { content: '“'; font-size: 6rem; color: hsl(var(--primary)); opacity: 0.15; position: absolute; top: -20px; left: 20px; }
 
-    /* Instagram */
+    /* Instagram Embed */
     #instagram { padding: 6rem 0; background: #fffaf0; text-align: center; }
-    .insta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin: 3rem 0; }
-    .insta-grid img { width: 100%; border-radius: 1rem; box-shadow: 0 6px 20px rgba(0,0,0,0.1); transition: transform 0.3s; }
-    .insta-grid img:hover { transform: scale(1.05); }
+    .insta-embed-container {
+      max-width: 1000px;
+      margin: 3rem auto 0;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .insta-embed-container iframe {
+      width: 100%;
+      height: 800px; /* Ajuste a altura conforme necessário; o Instagram adapta */
+      border: none;
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .insta-embed-container iframe { height: 1200px; } /* Mais espaço em mobile para scroll */
+    }
 
     /* Localização */
     #localizacao { padding: 6rem 0; }
@@ -172,7 +185,7 @@
       background: #25D366; color: white; padding: 1.3rem 2.5rem;
       border-radius: 999px; font-size: 1.35rem; font-weight: 700; text-decoration: none;
       margin-top: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.35s; width: 100%;
-      border: none; /* sem linha branca */
+      border: none;
     }
     .btn-big-whatsapp:hover { background: #20bd5a; transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.25); }
 
@@ -226,6 +239,7 @@
         <a href="#depoimentos">Depoimentos</a>
         <a href="#localizacao">Localização</a>
         <a href="#contato">Contato</a>
+        <a href="#instagram">Instagram</a>
       </nav>
     </div>
   </header>
@@ -305,22 +319,6 @@
       </div>
     </section>
 
-    <section id="instagram">
-      <div class="container">
-        <h2 style="font-size:2.8rem; margin-bottom:1rem;">Siga no Instagram</h2>
-        <p>Acompanhe nossas promoções diárias, novidades e dicas de saúde!</p>
-        <a href="https://www.instagram.com/farmaciapopular.aureny3" target="_blank" style="display:inline-block; margin:1.5rem 0; background:#E4405F; color:white; padding:1rem 2.5rem; border-radius:999px; text-decoration:none; font-weight:600;">
-          <i class="fab fa-instagram"></i> @farmaciapopular.aureny3
-        </a>
-        <div class="insta-grid">
-          <img src="https://farmaciapopularaureny.wordpress.com/wp-content/uploads/2026/02/img_0085-1.png?w=400" alt="Promoção 1">
-          <img src="https://farmaciapopularaureny.wordpress.com/wp-content/uploads/2026/02/img_2324-1.png?w=400" alt="Promoção 2">
-          <img src="https://farmaciapopularaureny.wordpress.com/wp-content/uploads/2026/02/img_2325-1.png?w=400" alt="Atendimento">
-          <img src="https://farmaciapopularaureny.wordpress.com/wp-content/uploads/2026/02/img_2326-1.png?w=400" alt="Produtos">
-        </div>
-      </div>
-    </section>
-
     <section id="localizacao">
       <div class="container">
         <h2 style="text-align:center; font-size:2.8rem; margin-bottom:3rem;">Nossa Localização</h2>
@@ -369,6 +367,21 @@
               <i class="fab fa-whatsapp"></i> Falar agora no WhatsApp
             </a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="instagram">
+      <div class="container">
+        <h2 style="font-size:2.8rem; margin-bottom:1rem;">Siga no Instagram</h2>
+        <p>Acompanhe nossas promoções diárias, novidades e dicas de saúde em tempo real!</p>
+        <a href="https://www.instagram.com/farmaciapopular.aureny3" target="_blank" style="display:inline-block; margin:1.5rem 0; background:#E4405F; color:white; padding:1rem 2.5rem; border-radius:999px; text-decoration:none; font-weight:600;">
+          <i class="fab fa-instagram"></i> @farmaciapopular.aureny3
+        </a>
+        <div class="insta-embed-container">
+          <!-- Embed oficial do perfil Instagram (substitua pelo código exato se necessário) -->
+          <iframe src="https://www.instagram.com/farmaciapopular.aureny3/embed" 
+                  frameborder="0" scrolling="no" allowtransparency="true"></iframe>
         </div>
       </div>
     </section>
