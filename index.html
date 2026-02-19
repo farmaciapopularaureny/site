@@ -12,6 +12,21 @@
   gtag('config', 'AW-17929595149');
 </script>
 
+  <script>
+function gtag_report_conversion_insta(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+    'send_to': 'AW-17929595149/1tDgCJPXw_sbEI3Sv-VC',
+    'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 
 <script>
 function gtag_report_conversion_maps(url) {
@@ -438,9 +453,12 @@ href="https://www.google.com/maps/search/?api=1&query=Farmácia+Popular+Aureny+I
    <div class="container">
     <h2 style="font-size:2.8rem; margin-bottom:1rem;">Siga no Instagram</h2>
     <p>Acompanhe nossas promoções diárias, novidades e dicas de saúde em tempo real!</p>
-    <a href="https://www.instagram.com/farmaciapopular.aureny3" target="_blank" style="display:inline-block; margin:1.5rem 0; background:#E4405F; color:white; padding:1rem 2.5rem; border-radius:999px; text-decoration:none; font-weight:600;">
-     <i class="fab fa-instagram"></i> @farmaciapopular.aureny3
-    </a>
+<a onclick="return gtag_report_conversion_insta('https://www.instagram.com/farmaciapopular.aureny3')" 
+href="https://www.instagram.com/farmaciapopular.aureny3" 
+target="_blank"
+style="display:inline-block; margin:1.5rem 0; background:#E4405F; color:white; padding:1rem 2.5rem; border-radius:999px; text-decoration:none; font-weight:600;">
+ <i class="fab fa-instagram"></i> @farmaciapopular.aureny3
+</a>
     <div class="insta-embed-container">
      <iframe src="https://www.instagram.com/farmaciapopular.aureny3/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
     </div>
@@ -457,7 +475,11 @@ href="https://www.google.com/maps/search/?api=1&query=Farmácia+Popular+Aureny+I
    <p>Av. Aureny III, Quadra 106, Lote 06 – Palmas, TO</p>
    <p>WhatsApp: (63) 99235-9635</p>
    <div class="footer-social">
-    <a href="https://www.instagram.com/farmaciapopular.aureny3" target="_blank"><i class="fab fa-instagram"></i></a>
+<a onclick="return gtag_report_conversion_insta('https://www.instagram.com/farmaciapopular.aureny3')" 
+href="https://www.instagram.com/farmaciapopular.aureny3" 
+target="_blank">
+ <i class="fab fa-instagram"></i>
+</a>
 <a onclick="return gtag_report_conversion('https://wa.me/5563992359635')" 
    href="https://wa.me/5563992359635" 
    target="_blank"><i class="fab fa-whatsapp"></i></a>
