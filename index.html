@@ -143,13 +143,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   position: relative;
   margin-top: 80px;
   overflow: hidden;
-  background: #E30613;  /* cor vermelha principal do seu banner – fica bonito nas laterais */
+  background: #E30613;  /* vermelho da marca nas laterais */
+  min-height: 60vh;     /* garante espaço mínimo vertical */
 }
 
 .banner-desktop {
   width: 100%;
-  height: auto;              /* altura automática → adapta ao zoom e à proporção real */
-  max-height: 85vh;          /* limite suave para não ficar gigante em monitores altos */
+  height: auto;
+  max-height: 90vh;     /* permite mais altura se a tela aguentar */
 }
 
 .banner-desktop a {
@@ -161,12 +162,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   width: 100%;
   height: auto;
   display: block;
-  object-fit: contain;       /* ESSENCIAL: mostra TODO o banner sem corte nem zoom forçado */
-  background: #E30613;       /* ou #000 se preferir preto nas laterais */
+  object-fit: contain;
+  object-position: center bottom;  /* ← FOCO NA BASE: prioriza a parte de baixo (WhatsApp, preços, frase final) */
+  background: #E30613;
 }
 
-/* Mantém o display correto desktop/mobile (já existe no seu código, mas reforçando) */
+/* Se ainda cortar um pouco em telas mais baixas, aumente o min-height */
 @media (min-width: 769px) {
+  #inicio {
+    min-height: 70vh;   /* ou teste 80vh se quiser mais espaço vertical */
+  }
   .carousel { display: none; }
   .banner-desktop { display: block; }
 }
@@ -175,7 +180,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .banner-desktop { display: none; }
   .carousel { display: block; }
 }
-
+   
  .carousel-btn {
    position: absolute; top: 50%; transform: translateY(-50%);
    background: rgba(0,0,0,0.4); color: white; border: none;
