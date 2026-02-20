@@ -142,39 +142,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 #inicio {
   position: relative;
   margin-top: 80px;
-  height: 70vh;                  /* ou 80vh – ajuste conforme o gosto */
-  min-height: 500px;
   overflow: hidden;
-  background: #000;
+  background: #E30613;  /* cor vermelha principal do seu banner – fica bonito nas laterais */
 }
 
 .banner-desktop {
   width: 100%;
-  height: 100%;
+  height: auto;              /* altura automática → adapta ao zoom e à proporção real */
+  max-height: 85vh;          /* limite suave para não ficar gigante em monitores altos */
+}
+
+.banner-desktop a {
+  display: block;
+  width: 100%;
 }
 
 .banner-desktop img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 30%;   /* ← AJUSTE AQUI O PRINCIPAL */
-  /* Teste esses valores até o texto principal ficar bem visível: */
-  /* center 20%   → mais para cima */
-  /* center 40%   → mais para baixo */
-  /* center top    ou center bottom  → extremos */
-  /* 50% 50%      → centro exato (padrão) */
+  height: auto;
+  display: block;
+  object-fit: contain;       /* ESSENCIAL: mostra TODO o banner sem corte nem zoom forçado */
+  background: #E30613;       /* ou #000 se preferir preto nas laterais */
 }
 
-/* Se quiser preencher a tela toda e aceitar corte controlado (teste isso se contain deixar muito espaço preto) */
+/* Mantém o display correto desktop/mobile (já existe no seu código, mas reforçando) */
 @media (min-width: 769px) {
-  .banner-desktop {
-    height: 70vh;                 /* ou 80vh */
-  }
-  .banner-desktop img {
-    height: 100%;
-    object-fit: cover;
-    object-position: center 25%;  /* 25% = sobe o foco um pouco; teste 20% a 40% dependendo de onde está o texto principal */
-  }
+  .carousel { display: none; }
+  .banner-desktop { display: block; }
+}
+
+@media (max-width: 768px) {
+  .banner-desktop { display: none; }
+  .carousel { display: block; }
+}
 
  .carousel-btn {
    position: absolute; top: 50%; transform: translateY(-50%);
