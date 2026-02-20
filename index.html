@@ -142,27 +142,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 #inicio {
   position: relative;
   margin-top: 80px;
+  height: 70vh;                  /* ou 80vh – ajuste conforme o gosto */
+  min-height: 500px;
   overflow: hidden;
-  background: #000;               /* ou #E30613 se quiser usar a cor vermelha do banner nas laterais */
-  min-height: 400px;              /* evita colapso se imagem demorar */
+  background: #000;
 }
 
 .banner-desktop {
   width: 100%;
-  height: auto;                  /* altura vem da imagem */
-  max-height: 80vh;              /* limita para não ficar gigante */
-  background: #000;              /* ou #E30613 para combinar com o vermelho do banner */
-}
-
-.banner-desktop a {
-  display: block;
+  height: 100%;
 }
 
 .banner-desktop img {
   width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;           /* ← ESSA É A CHAVE: mostra tudo sem zoom nem corte */
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;   /* ← AJUSTE AQUI O PRINCIPAL */
+  /* Teste esses valores até o texto principal ficar bem visível: */
+  /* center 20%   → mais para cima */
+  /* center 40%   → mais para baixo */
+  /* center top    ou center bottom  → extremos */
+  /* 50% 50%      → centro exato (padrão) */
 }
 
 /* Se quiser preencher a tela toda e aceitar corte controlado (teste isso se contain deixar muito espaço preto) */
