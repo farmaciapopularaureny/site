@@ -139,20 +139,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    nav a { margin: 1rem 0; font-size: 1.2rem; }
  }
 
- #inicio { 
-   position: relative; 
-   height: 70vh; 
-   min-height: 480px; 
-   max-height: 720px; 
-   overflow: hidden; 
-   margin-top: 80px; 
- }
+#inicio {
+  position: relative;
+  margin-top: 80px;
+  overflow: hidden;
+  background: #000;  /* fundo preto para não ficar branco nas laterais se usar contain */
+}
 
- .carousel, .banner-desktop { height: 100%; }
+.banner-desktop {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 85vh;          /* evita que fique gigante em telas muito altas */
+}
 
- .carousel-inner { display: flex; height: 100%; transition: transform 0.6s ease-in-out; }
- .carousel-item { flex: 0 0 100%; height: 100%; }
- .carousel-item img, .banner-desktop img { width: 100%; height: 100%; object-fit: cover; }
+.banner-desktop a {
+  display: block;
+  height: 100%;
+}
+
+.banner-desktop img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;       /* mostra a imagem INTEIRA sem cortar */
+  /* Se preferir preencher e cortar um pouco controlado, troque por: */
+  /* object-fit: cover; */
+  /* object-position: center 30%; */   /* ajuste 20% a 50% para centralizar o conteúdo importante */
+}
 
  .carousel-btn {
    position: absolute; top: 50%; transform: translateY(-50%);
