@@ -292,8 +292,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    background: #111; color: #aaa; text-align: center; padding: 4rem 1rem 2rem; font-size: 0.95rem;
  }
  .footer-logo img { height: 5rem; margin-bottom: 1.5rem; }
- .footer-social a { color: #aaa; font-size: 1.8rem; margin: 0 1rem; transition: color 0.3s; }
- .footer-social a:hover { color: hsl(var(--primary)); }
+.footer-social a {
+  color: #aaa;
+  font-size: 1.8rem;
+  margin: 0 1rem;
+  transition: color 0.3s;
+  text-decoration: none;       /* ← ADICIONE ISSO: remove o underline/tracinho */
+}
+
+.footer-social a:hover {
+  color: hsl(var(--primary));
+  text-decoration: none;       /* ← ADICIONE NO HOVER também, para não aparecer quando passar o mouse */
+}
 
  .whatsapp-float {
    position: fixed; bottom: 28px; right: 28px; background: #25D366; color: white;
