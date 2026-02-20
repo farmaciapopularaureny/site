@@ -143,30 +143,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   position: relative;
   margin-top: 80px;
   overflow: hidden;
-  background: #000;  /* fundo preto para não ficar branco nas laterais se usar contain */
+  background: #000;               /* ou #E30613 se quiser usar a cor vermelha do banner nas laterais */
+  min-height: 400px;              /* evita colapso se imagem demorar */
 }
 
 .banner-desktop {
-  display: block;
   width: 100%;
   height: auto;
-  max-height: 85vh;          /* evita que fique gigante em telas muito altas */
+  max-height: 80vh;               /* limita altura para não ficar gigante em monitores 4K altos */
 }
 
 .banner-desktop a {
   display: block;
-  height: 100%;
 }
 
 .banner-desktop img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: contain;       /* mostra a imagem INTEIRA sem cortar */
-  /* Se preferir preencher e cortar um pouco controlado, troque por: */
-  /* object-fit: cover; */
-  /* object-position: center 30%; */   /* ajuste 20% a 50% para centralizar o conteúdo importante */
+  object-fit: contain;            /* mostra imagem INTEIRA sem corte */
+  background: #000;               /* preenche laterais com preto se houver espaço */
 }
+
+/* Se quiser preencher a tela toda e aceitar corte controlado (teste isso se contain deixar muito espaço preto) */
+@media (min-width: 769px) {
+  .banner-desktop {
+    height: 70vh;                 /* ou 80vh */
+  }
+  .banner-desktop img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;  /* 25% = sobe o foco um pouco; teste 20% a 40% dependendo de onde está o texto principal */
+  }
 
  .carousel-btn {
    position: absolute; top: 50%; transform: translateY(-50%);
