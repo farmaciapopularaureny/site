@@ -149,8 +149,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 .banner-desktop {
   width: 100%;
-  height: auto;
-  max-height: 80vh;               /* limita altura para não ficar gigante em monitores 4K altos */
+  height: auto;                  /* altura vem da imagem */
+  max-height: 80vh;              /* limita para não ficar gigante */
+  background: #000;              /* ou #E30613 para combinar com o vermelho do banner */
 }
 
 .banner-desktop a {
@@ -161,8 +162,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   width: 100%;
   height: auto;
   display: block;
-  object-fit: contain;            /* mostra imagem INTEIRA sem corte */
-  background: #000;               /* preenche laterais com preto se houver espaço */
+  object-fit: contain;           /* ← ESSA É A CHAVE: mostra tudo sem zoom nem corte */
 }
 
 /* Se quiser preencher a tela toda e aceitar corte controlado (teste isso se contain deixar muito espaço preto) */
