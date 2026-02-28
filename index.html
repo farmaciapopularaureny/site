@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  
+ 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17929595149"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'AW-17929595149');
 </script>
-
   <script>
 function gtag_report_conversion_insta(url) {
   var callback = function () {
@@ -26,8 +24,6 @@ function gtag_report_conversion_insta(url) {
   return false;
 }
 </script>
-
-
 <script>
 function gtag_report_conversion_maps(url) {
   var callback = function () {
@@ -42,8 +38,8 @@ function gtag_report_conversion_maps(url) {
   return false;
 }
 </script>
-  
-  
+ 
+ 
   <script>
 function gtag_report_conversion(url) {
 var callback = function () {
@@ -60,7 +56,6 @@ gtag('event', 'conversion', {
 return false;
 }
 </script>
- 
  <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -68,7 +63,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MRKPCNQV');</script>
 <!-- End Google Tag Manager -->
- 
  <meta charset="UTF-8" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
  <title>Farmácia Popular Aureny III – Palmas TO</title>
@@ -79,10 +73,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
  <!-- Font Awesome -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <link rel="icon" href="https://farmaciapopularaureny.wordpress.com/wp-content/uploads/2026/02/img_2009-1.png" type="image/png">
-
-  
+ 
   <style>
  :root {
    --primary: 356 96% 46%; /* #E30613 */
@@ -104,7 +96,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  }
  h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; letter-spacing: -0.025em; }
  .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
-
  header {
    position: fixed;
    top: 0;
@@ -130,86 +121,89 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    transition: color 0.3s;
  }
  nav a:hover { color: #ffeb3b; }
-
  .menu-toggle { display: none; font-size: 2rem; cursor: pointer; color: white; }
  @media (max-width: 768px) {
    .menu-toggle { display: block; }
-   nav { 
-     position: absolute; top: 100%; left: 0; width: 100%; 
-     background: hsl(var(--primary)); flex-direction: column; 
-     padding: 1rem 0; display: none; 
+   nav {
+     position: absolute; top: 100%; left: 0; width: 100%;
+     background: hsl(var(--primary)); flex-direction: column;
+     padding: 1rem 0; display: none;
    }
    nav.active { display: flex; }
    nav a { margin: 1rem 0; font-size: 1.2rem; }
  }
-
 #inicio {
   position: relative;
   margin-top: 80px;
   overflow: hidden;
-  background: #E30613;  /* vermelho da marca nas laterais */
-  min-height: 60vh;     /* garante espaço mínimo vertical */
+  background: #E30613;
+  min-height: 60vh;
 }
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 4 / 5;          /* Ajuste aqui se quiser mais alto ou mais baixo */
+  max-height: 70vh;
+  min-height: 380px;
+}
+.carousel-inner {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  height: 100%;
+}
+.carousel-item {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.carousel-btn {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(0,0,0,0.5); color: white; border: none;
+  width: 50px; height: 50px; border-radius: 50%; font-size: 1.6rem;
+  cursor: pointer; z-index: 10; transition: all 0.3s;
+}
+.carousel-btn:hover { background: rgba(0,0,0,0.8); transform: translateY(-50%) scale(1.1); }
+#carousel-left { left: 15px; }
+#carousel-right { right: 15px; }
+.carousel-indicators { position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; z-index: 10; }
+.carousel-indicator { width: 10px; height: 10px; background: rgba(255,255,255,0.6); border-radius: 50%; cursor: pointer; transition: all 0.3s; }
+.carousel-indicator.active { background: white; transform: scale(1.3); }
 
 .banner-desktop {
   width: 100%;
   height: auto;
-  max-height: 90vh;     /* permite mais altura se a tela aguentar */
 }
-
 .banner-desktop a {
   display: block;
   width: 100%;
 }
-
 .banner-desktop img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: contain;
-  object-position: center bottom;  /* ← FOCO NA BASE: prioriza a parte de baixo (WhatsApp, preços, frase final) */
+  object-position: center bottom;
   background: #E30613;
 }
 
-/* Se ainda cortar um pouco em telas mais baixas, aumente o min-height */
 @media (min-width: 769px) {
-  #inicio {
-    min-height: 70vh;   /* ou teste 80vh se quiser mais espaço vertical */
-  }
+  #inicio { min-height: 75vh; }
   .carousel { display: none; }
   .banner-desktop { display: block; }
 }
-
 @media (max-width: 768px) {
   .banner-desktop { display: none; }
   .carousel { display: block; }
 }
-   
- .carousel-btn {
-   position: absolute; top: 50%; transform: translateY(-50%);
-   background: rgba(0,0,0,0.4); color: white; border: none;
-   width: 54px; height: 54px; border-radius: 50%; font-size: 1.8rem;
-   cursor: pointer; z-index: 10; transition: all 0.3s;
- }
- .carousel-btn:hover { background: rgba(0,0,0,0.7); transform: translateY(-50%) scale(1.1); }
- #carousel-left { left: 20px; }
- #carousel-right { right: 20px; }
- .carousel-indicators { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; z-index: 10; }
- .carousel-indicator { width: 12px; height: 12px; background: rgba(255,255,255,0.6); border-radius: 50%; cursor: pointer; transition: all 0.3s; }
- .carousel-indicator.active { background: white; transform: scale(1.2); }
-
- .banner-desktop { display: none; }
- .banner-desktop a { display: block; height: 100%; }
-
- @media (max-width: 768px) {
-   .banner-desktop { display: none; }
-   .carousel { display: block; }
- }
- @media (min-width: 769px) {
-   .carousel { display: none; }
-   .banner-desktop { display: block; }
- }
-
+  
  #hero-text {
    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-dark)) 100%);
    color: white; text-align: center; padding: 9rem 1.5rem 7rem; margin-top: -6rem;
@@ -225,7 +219,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    box-shadow: 0 10px 30px rgba(0,0,0,0.25); transition: all 0.35s;
  }
  .btn-whatsapp:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.3); background: #f8f8f8; }
-
  #servicos { padding: 6rem 0 8rem; background: #f9fafb; }
  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
  .card {
@@ -239,7 +232,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;
    font-size: 2.2rem; color: hsl(var(--primary));
  }
-
  #depoimentos { padding: 6rem 0; background: white; }
  .depoimentos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
  .depoimento {
@@ -247,7 +239,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    font-style: italic; position: relative;
  }
  .depoimento::before { content: '“'; font-size: 6rem; color: hsl(var(--primary)); opacity: 0.15; position: absolute; top: -20px; left: 20px; }
-
  #instagram { padding: 6rem 0; background: #fffaf0; text-align: center; }
  .insta-embed-container {
    max-width: 1000px; margin: 3rem auto 0; border-radius: 1rem; overflow: hidden;
@@ -255,7 +246,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  }
  .insta-embed-container iframe { width: 100%; height: 800px; border: none; display: block; }
  @media (max-width: 768px) { .insta-embed-container iframe { height: 390px; } }
-
  #localizacao { padding: 6rem 0; }
  .maps-container { border-radius: 1.5rem; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.18); border: 8px solid white; margin-bottom: 2rem; }
  .btn-maps {
@@ -264,7 +254,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    border-radius: 999px; font-weight: 600; text-decoration: none; transition: all 0.3s;
  }
  .btn-maps:hover { background: hsl(var(--primary-dark)); transform: translateY(-3px); }
-
  #contato { background: linear-gradient(to bottom, #fff3e0, #fffaf0); padding: 7rem 0; }
  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; max-width: 1100px; margin: 0 auto; }
  @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
@@ -287,7 +276,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    margin-top: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transition: all 0.35s; width: 100%;
  }
  .btn-big-whatsapp:hover { background: #20bd5a; transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.25); }
-
  footer {
    background: #111; color: #aaa; text-align: center; padding: 4rem 1rem 2rem; font-size: 0.95rem;
  }
@@ -297,14 +285,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   font-size: 1.8rem;
   margin: 0 1rem;
   transition: color 0.3s;
-  text-decoration: none;       /* ← ADICIONE ISSO: remove o underline/tracinho */
+  text-decoration: none;
 }
-
 .footer-social a:hover {
   color: hsl(var(--primary));
-  text-decoration: none;       /* ← ADICIONE NO HOVER também, para não aparecer quando passar o mouse */
+  text-decoration: none;
 }
-
  .whatsapp-float {
    position: fixed; bottom: 28px; right: 28px; background: #25D366; color: white;
    width: 72px; height: 72px; border-radius: 50%; display: flex; align-items: center;
@@ -312,7 +298,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    z-index: 999; transition: all 0.3s; text-decoration: none;
  }
  .whatsapp-float:hover { transform: scale(1.12); background: #20bd5a; }
-
  #cookie-banner {
    position: fixed; bottom: 0; left: 0; right: 0; background: #333; color: white;
    padding: 1.5rem; text-align: center; z-index: 10000; box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
@@ -325,12 +310,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  </style>
 </head>
 <body>
-
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MRKPCNQV"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-
  <header>
   <div class="container">
    <div class="logo">
@@ -347,7 +330,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    </nav>
   </div>
  </header>
-
  <main>
   <section id="inicio">
    <!-- Carrossel - só mobile -->
@@ -363,31 +345,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <button id="carousel-right" class="carousel-btn"><i class="fas fa-chevron-right"></i></button>
     <div class="carousel-indicators" id="carousel-indicators"></div>
    </div>
-
    <!-- Banner único - só desktop -->
    <div class="banner-desktop">
-<a onclick="return gtag_report_conversion('https://wa.me/5563992359635?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais...')" 
+<a onclick="return gtag_report_conversion('https://wa.me/5563992359635?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais...')"
    href="https://wa.me/5563992359635?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais...">
-<img src="https://farmaciapopularaureny.wordpress.com/wp-content/uploads/2026/02/banner-pixel-para-mercado-shops-oferta-produtos-farmacia-drogaria-moderno-vermelho-e-amarelo-1920-x-1080-px-3840-x-1026-px-1.png" 
-     alt="Farmácia Popular Aureny III" 
+<img src="https://farmaciapopularaureny.wordpress.com/wp-content/uploads/2026/02/banner-pixel-para-mercado-shops-oferta-produtos-farmacia-drogaria-moderno-vermelho-e-amarelo-1920-x-1080-px-3840-x-1026-px-1.png"
+     alt="Farmácia Popular Aureny III"
      loading="lazy">
     </a>
    </div>
   </section>
-
   <section id="hero-text">
    <div class="container">
     <h1>A sua farmácia no <span class="highlight">Aureny III</span></h1>
     <p>Cuidado completo para você e sua família com os melhores preços e atendimento especializado que você merece.</p>
     <br><br><br>
-<a onclick="return gtag_report_conversion('https://wa.me/5563992359635?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais...')" 
-   href="https://wa.me/5563992359635?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais..." 
+<a onclick="return gtag_report_conversion('https://wa.me/5563992359635?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais...')"
+   href="https://wa.me/5563992359635?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais..."
    class="btn-whatsapp">
      <i class="fab fa-whatsapp"></i> Falar no WhatsApp
     </a>
    </div>
   </section>
-
   <section id="servicos">
    <div class="container">
     <h2 style="text-align:center; font-size:2.8rem; margin-bottom:3rem;">Nossos Diferenciais</h2>
@@ -415,7 +394,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
    </div>
   </section>
-
   <section id="contato">
    <div class="container">
     <h2 style="text-align:center; font-size:2.8rem; margin-bottom:3rem;">Venha para a +Popular Pharma!</h2>
@@ -446,8 +424,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span>Av. Aureny III (Avenida E), Quadra 106, Lote 06<br>Palmas – TO</span>
        </div>
       </div>
-<a onclick="return gtag_report_conversion('https://wa.me/5563992359635?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais...')" 
-   href="https://wa.me/5563992359635?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais..." 
+<a onclick="return gtag_report_conversion('https://wa.me/5563992359635?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais...')"
+   href="https://wa.me/5563992359635?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais..."
    class="btn-big-whatsapp">
        <i class="fab fa-whatsapp"></i> Falar agora no WhatsApp
       </a>
@@ -455,7 +433,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
    </div>
   </section>
-
   <section id="localizacao">
    <div class="container">
     <h2 style="text-align:center; font-size:2.8rem; margin-bottom:3rem;">Nossa Localização</h2>
@@ -463,7 +440,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.324366693165!2d-48.3178531!3d-10.315904900000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x933b312a07d9775d%3A0x241734cfd8ffb527!2sFarmacia%20%2BPopular%20Aureny%203!5e0!3m2!1spt-BR!2sbr!4v1770402553968!5m2!1spt-BR!2sbr" width="100%" height="520" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div style="text-align:center;">
-<a onclick="return gtag_report_conversion_maps('https://www.google.com/maps/search/?api=1&query=Farmácia+Popular+Aureny+III+Palmas+TO')" 
+<a onclick="return gtag_report_conversion_maps('https://www.google.com/maps/search/?api=1&query=Farmácia+Popular+Aureny+III+Palmas+TO')"
 href="https://www.google.com/maps/search/?api=1&query=Farmácia+Popular+Aureny+III+Palmas+TO"
  target="_blank" class="btn-maps">
       <i class="fas fa-directions"></i> Abrir no Google Maps
@@ -471,7 +448,6 @@ href="https://www.google.com/maps/search/?api=1&query=Farmácia+Popular+Aureny+I
     </div>
    </div>
   </section>
-
   <section id="depoimentos">
    <div class="container">
     <h2 style="text-align:center; font-size:2.8rem; margin-bottom:3rem;">O que nossos clientes dizem</h2>
@@ -491,13 +467,12 @@ href="https://www.google.com/maps/search/?api=1&query=Farmácia+Popular+Aureny+I
     </div>
    </div>
   </section>
-
   <section id="instagram">
    <div class="container">
     <h2 style="font-size:2.8rem; margin-bottom:1rem;">Siga no Instagram</h2>
     <p>Acompanhe nossas promoções diárias, novidades e dicas de saúde em tempo real!</p>
-<a onclick="return gtag_report_conversion_insta('https://www.instagram.com/farmaciapopular.aureny3')" 
-href="https://www.instagram.com/farmaciapopular.aureny3" 
+<a onclick="return gtag_report_conversion_insta('https://www.instagram.com/farmaciapopular.aureny3')"
+href="https://www.instagram.com/farmaciapopular.aureny3"
 target="_blank"
 style="display:inline-block; margin:1.5rem 0; background:#E4405F; color:white; padding:1rem 2.5rem; border-radius:999px; text-decoration:none; font-weight:600;">
  <i class="fab fa-instagram"></i> @farmaciapopular.aureny3
@@ -508,7 +483,6 @@ style="display:inline-block; margin:1.5rem 0; background:#E4405F; color:white; p
    </div>
   </section>
  </main>
-
  <footer>
   <div class="container">
    <div class="footer-logo">
@@ -519,30 +493,27 @@ style="display:inline-block; margin:1.5rem 0; background:#E4405F; color:white; p
    <p>WhatsApp: (63) 99235-9635</p>
     <p style="font-size:0.9rem; text-align:center; margin-top:1rem;">Medicamentos controlados ou de uso contínuo exigem receita médica válida. Entregas sujeitas a verificação e legislação vigente (ANVISA).</p>
    <div class="footer-social">
-<a onclick="return gtag_report_conversion_insta('https://www.instagram.com/farmaciapopular.aureny3')" 
-href="https://www.instagram.com/farmaciapopular.aureny3" 
+<a onclick="return gtag_report_conversion_insta('https://www.instagram.com/farmaciapopular.aureny3')"
+href="https://www.instagram.com/farmaciapopular.aureny3"
 target="_blank">
  <i class="fab fa-instagram"></i>
 </a>
-<a onclick="return gtag_report_conversion('https://wa.me/5563992359635')" 
-   href="https://wa.me/5563992359635" 
+<a onclick="return gtag_report_conversion('https://wa.me/5563992359635')"
+   href="https://wa.me/5563992359635"
    target="_blank"><i class="fab fa-whatsapp"></i></a>
    </div>
    <p style="margin-top:2rem;">© 2026 Farmácia Popular Aureny III – Todos os direitos reservados</p>
   </div>
  </footer>
-
-<a onclick="return gtag_report_conversion('https://wa.me/5563992359635?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais...')" 
-   href="https://wa.me/5563992359635?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais..." 
+<a onclick="return gtag_report_conversion('https://wa.me/5563992359635?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais...')"
+   href="https://wa.me/5563992359635?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais..."
    class="whatsapp-float" target="_blank">
   <i class="fab fa-whatsapp"></i>
 </a>
-
  <div id="cookie-banner">
   <p>Usamos cookies para melhorar sua experiência no site. Ao continuar, você aceita nossa <a href="#" style="color:#ffeb3b;">Política de Cookies</a>.</p>
   <button id="accept-cookies">Aceitar</button>
  </div>
-
  <script>
   // Carousel (só se existir no DOM - mobile)
   const carouselInner = document.getElementById('carousel-inner');
@@ -552,6 +523,7 @@ target="_blank">
    const totalItems = items.length;
    let current = 0;
 
+   // Cria indicadores
    for (let i = 0; i < totalItems; i++) {
     const indicator = document.createElement('div');
     indicator.classList.add('carousel-indicator');
@@ -572,7 +544,10 @@ target="_blank">
    document.getElementById('carousel-left')?.addEventListener('click', prevSlide);
    document.getElementById('carousel-right')?.addEventListener('click', nextSlide);
 
+   // Auto-avance
    setInterval(nextSlide, 5500);
+
+   // Inicializa
    updateCarousel();
   }
 
