@@ -247,18 +247,22 @@
         display: none;
       }
       .nav-overlay.show { display: block; }
-      .nav-close {
-        position: absolute;
-        top: 1rem; right: 1rem;
-        background: rgba(255,255,255,0.15);
-        border: none;
-        color: white;
-        width: 38px; height: 38px;
-        border-radius: 50%;
-        cursor: pointer;
-        font-size: 1.2rem;
-        display: flex; align-items: center; justify-content: center;
-      }
+.nav-close {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: white;
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  align-items: center; justify-content: center;
+  display: none;
+}
+@media (max-width: 900px) {
+  .nav-close { display: flex; }
+}
     }
 
     /* ============================================
@@ -1150,7 +1154,7 @@
       </a>
       <div class="header-right">
         <nav id="nav-menu">
-          <button class="nav-close" id="nav-close" aria-label="Fechar menu"><i class="fas fa-times"></i></button>
+         <button class="nav-close" id="nav-close" aria-label="Fechar menu" style="display:none;"><i class="fas fa-times"></i></button>
           <a href="#inicio">Início</a>
           <a href="#servicos">Serviços</a>
           <a href="#sobre">Sobre</a>
